@@ -14,11 +14,12 @@ public class IgaguriController : MonoBehaviour
     {
         GetComponent<Rigidbody>().isKinematic = true;
         GetComponent<ParticleSystem>().Play();
+        Destroy(this.gameObject,0.5f);
     }
 
         void Start()
     {
-        //Shoot(new Vector3(0, 200, 2000));
+        
     }
 
     
