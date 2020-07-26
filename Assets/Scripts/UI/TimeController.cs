@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class TimeController : MonoBehaviour
 {
@@ -18,5 +20,10 @@ public class TimeController : MonoBehaviour
     {
         this.time -= Time.deltaTime;
         this.timerText.GetComponent<Text>().text = "Time：" + this.time.ToString("F1");
+
+         if(time<0)
+        {
+            SceneManager.LoadScene("ResultScene");
+        }
     }
 }
